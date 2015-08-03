@@ -10,6 +10,13 @@ namespace Linq_HelloWorld_
     {
         static void Main(string[] args)
         {
+            string[] greetings = { " hello world ", "Hello linq", "hello git" };
+            var items = from s in greetings where s.EndsWith("linq") select s;
+            foreach (var item in items)
+            {
+                Console.WriteLine(" item " + item);
+            }
+            Console.ReadLine();
         }
     }
 }
