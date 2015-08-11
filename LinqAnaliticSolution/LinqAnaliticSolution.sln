@@ -5,6 +5,19 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq(HelloWorld)", "Linq(HelloWorld)\Linq(HelloWorld).csproj", "{310A3AB7-3902-4B3C-82AA-AAAA48CB6305}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToXMLHelloWorld", "LinqToXMLHelloWorld\LinqToXMLHelloWorld.csproj", "{E1160B1B-F6AB-44BB-B302-7F5EC47A4E2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSQLHelloWorld", "LinqToSQLHelloWorld\LinqToSQLHelloWorld.csproj", "{9166CB54-01FD-4D8D-B646-856FC1BA0116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQBasicAnalitic", "LINQBasicAnalitic\LINQBasicAnalitic.csproj", "{4B41553D-E0E3-42CF-BB02-9CF02B12AD33}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B0039D1-BEB6-4E8C-AA29-4E1A2C0F265F} = {8B0039D1-BEB6-4E8C-AA29-4E1A2C0F265F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonClasses", "CommonClasses\CommonClasses.csproj", "{8B0039D1-BEB6-4E8C-AA29-4E1A2C0F265F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingLinqAnalitic", "CastingLinqAnalitic\CastingLinqAnalitic.csproj", "{2A005597-BCB5-4BBF-B021-E51CD519E7A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +28,26 @@ Global
 		{310A3AB7-3902-4B3C-82AA-AAAA48CB6305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{310A3AB7-3902-4B3C-82AA-AAAA48CB6305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{310A3AB7-3902-4B3C-82AA-AAAA48CB6305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1160B1B-F6AB-44BB-B302-7F5EC47A4E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1160B1B-F6AB-44BB-B302-7F5EC47A4E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1160B1B-F6AB-44BB-B302-7F5EC47A4E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1160B1B-F6AB-44BB-B302-7F5EC47A4E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9166CB54-01FD-4D8D-B646-856FC1BA0116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9166CB54-01FD-4D8D-B646-856FC1BA0116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9166CB54-01FD-4D8D-B646-856FC1BA0116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9166CB54-01FD-4D8D-B646-856FC1BA0116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B41553D-E0E3-42CF-BB02-9CF02B12AD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B41553D-E0E3-42CF-BB02-9CF02B12AD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B41553D-E0E3-42CF-BB02-9CF02B12AD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B41553D-E0E3-42CF-BB02-9CF02B12AD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0039D1-BEB6-4E8C-AA29-4E1A2C0F265F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0039D1-BEB6-4E8C-AA29-4E1A2C0F265F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0039D1-BEB6-4E8C-AA29-4E1A2C0F265F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0039D1-BEB6-4E8C-AA29-4E1A2C0F265F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A005597-BCB5-4BBF-B021-E51CD519E7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A005597-BCB5-4BBF-B021-E51CD519E7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A005597-BCB5-4BBF-B021-E51CD519E7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A005597-BCB5-4BBF-B021-E51CD519E7A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
