@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CommonClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommonClasses
+namespace LinqToSQLHelloWorld
 {
     public class FakeDBData
     {

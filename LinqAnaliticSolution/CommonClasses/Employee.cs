@@ -24,7 +24,16 @@ namespace CommonClasses
         }
         public static Employee[] GetEmployeesArrayList()
         {
-            return ((Employee[])GetEmplyees().ToArray());
+            Employee[] al = new Employee[]
+            {
+                new Employee { Id = 1, firstName = "Joe1", lastName = "Ratz" },
+                new Employee { Id = 1, firstName = "Wiliam", lastName = "Gatez" },
+                new Employee { Id = 1, firstName = "Anders", lastName = "Hejsberg" },
+                new Employee { Id = 1, firstName = "David", lastName = "Lightman" },
+                new Employee { Id = 1, firstName = "Kevin", lastName = "Flyin" }
+            };
+            
+            return al;
         }
     }
 }
