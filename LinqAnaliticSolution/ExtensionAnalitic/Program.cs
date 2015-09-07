@@ -52,7 +52,22 @@ namespace ExtensionAnalitic
 
             JoinExample();
 
+            GroupJoinExample();
+
             Console.ReadLine();
+        }
+
+        private static void GroupJoinExample()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Employee[] emplyees = Employee.GetEmployeesArrayList();
+            EmplyeeOptionEntry[] empOptions = EmplyeeOptionEntry.GetEmplyeeOptionsEntrys();
+            var employeeOptions = emplyees.GroupJoin(empOptions, e => e.Id, o => o.id, (e, os) => new { Id = e.Id, Name = e.firstName, Options = os.Sum(o => o.optionsCount) });
+            foreach(var item in employeeOptions)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ResetColor();
         }
 
         private static void JoinExample()
