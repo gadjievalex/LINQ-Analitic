@@ -54,7 +54,69 @@ namespace ExtensionAnalitic
 
             GroupJoinExample();
 
+            GroupByExample();
+            GroupByWithComparer();
+            GroupByDateTime();
+            GroupByComparerAndTwoEnumerables();
+
             Console.ReadLine();
+        }
+
+        private static void GroupByComparerAndTwoEnumerables()
+        {
+            FounderNumbersComparer comp = new FounderNumbersComparer();
+            EmplyeeOptionEntry[] empOptions = EmplyeeOptionEntry.GetEmplyeeOptionsEntrys();
+            IEnumerable<IGrouping<int, DateTime>> opts = empOptions.GroupBy(o => o.id, o => o.dateAwarded, comp);
+            foreach(IGrouping<int, DateTime>keyGroup in opts)
+            {
+                foreach(DateTime date in keyGroup)
+                {
+                    Console.WriteLine(date.ToShortDateString() + " four result element item ");
+                }
+            }
+            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        }
+
+        private static void GroupByDateTime()
+        {
+            EmplyeeOptionEntry[] empOptions = EmplyeeOptionEntry.GetEmplyeeOptionsEntrys();
+            IEnumerable<IGrouping<int, DateTime>> opts = empOptions.GroupBy(o => o.id, e => e.dateAwarded);
+            foreach(IGrouping<int, DateTime>keyGroup in opts)
+            {
+                foreach(DateTime date in keyGroup)
+                {
+                    Console.WriteLine(date.ToShortDateString()+"#############################");
+                }
+            }
+        }
+
+        private static void GroupByWithComparer()
+        {
+            FounderNumbersComparer comp = new FounderNumbersComparer();
+            EmplyeeOptionEntry[] empOptions = EmplyeeOptionEntry.GetEmplyeeOptionsEntrys();
+            IEnumerable<IGrouping<int, EmplyeeOptionEntry>> opts = empOptions.GroupBy(o => o.id, comp);
+            foreach(IGrouping<int, EmplyeeOptionEntry>keyGroup in opts)
+            {
+                Console.WriteLine(" options ");
+                foreach(EmplyeeOptionEntry element in keyGroup)
+                {
+                    Console.WriteLine(" {0} {1} {2} ", element.id, element.optionsCount, element.dateAwarded);
+                }
+            }
+        }
+
+        private static void GroupByExample()
+        {
+            EmplyeeOptionEntry[] empOptions = EmplyeeOptionEntry.GetEmplyeeOptionsEntrys();
+            IEnumerable<IGrouping<int, EmplyeeOptionEntry>> outerSequence = empOptions.GroupBy(o => o.id);
+            foreach(IGrouping<int, EmplyeeOptionEntry>keyGroupSequence in outerSequence)
+            {
+                Console.WriteLine(" Entryes elements ");
+                foreach(EmplyeeOptionEntry element in keyGroupSequence)
+                {
+                    Console.WriteLine(" id {0} options count {1} dateawarded {2}",element.id, element.optionsCount, element.dateAwarded);
+                }
+            }
         }
 
         private static void GroupJoinExample()
