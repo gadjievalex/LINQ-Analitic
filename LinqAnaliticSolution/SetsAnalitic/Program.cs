@@ -1,5 +1,6 @@
 ﻿using CommonClasses;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,64 @@ namespace SetsAnalitic
             IntersectionExample();
             ExceptExample();
             CastExample();
+            OfTypeExample();
+            AsEnumerableExample();
 
             Console.ReadLine();
         }
 
+        private static void AsEnumerableExample()
+        {
+            var someCollection = EmplyeeOptionEntry.GetEmplyeeOptionsEntrys().Where(e => e.id == 1).AsEnumerable().Reverse();
+            foreach(var cust in someCollection)
+            {
+                Console.WriteLine(cust);
+            }
+            PrintEnd();
+        }
+
+        private static void PrintEnd()
+        {
+            Console.WriteLine(" END CURENT METHOD ");
+        }
+
+        private static void OfTypeExample()
+        {
+            ArrayList al = Employee.GetEmplyees();
+            al.Add(new Employee { Id = 22 });
+            var items = al.Cast<Employee>();
+            Console.WriteLine(" try cast operation using ");
+            try
+            {
+                foreach(Employee item in items)
+                {
+                    Console.WriteLine(" {0} {1} {2} ", item.Id, item.firstName, item.lastName);
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(" {0} {1} ", ex.Message, System.Environment.NewLine);
+            }
+            Console.WriteLine(" try OfType using ");
+            var item2 = al.OfType<Employee>();
+            foreach(Employee item in item2)
+            {
+                Console.WriteLine(" {0} {1} {2} ", item.Id, item.firstName, item.lastName);
+            }
+            PrintEnd();
+        }
+
         private static void CastExample()
         {
-            
+            ArrayList employees = Employee.GetEmplyees();
+            Console.WriteLine(" employees array type is - > " + employees.GetType());
+            var seq = employees.Cast<Employee>();
+            Console.WriteLine(" employees after casting type is - > " + seq.GetType());
+            var emps = seq.OrderBy(e => e.lastName);
+            foreach(Employee emp in emps)
+            {
+                Console.WriteLine(" {0} {1} ", emp.firstName, emp.lastName);
+            }
         }
 
         private static void ExceptExample()

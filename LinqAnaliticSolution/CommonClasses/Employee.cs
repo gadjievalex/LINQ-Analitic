@@ -16,10 +16,10 @@ namespace CommonClasses
         {
             ArrayList al = new ArrayList();
             al.Add(new Employee { Id = 1, firstName = "Joe1", lastName = "Ratz" });
-            al.Add(new Employee { Id = 1, firstName = "Wiliam", lastName = "Gatez" });
-            al.Add(new Employee { Id = 1, firstName = "Anders", lastName = "Hejsberg" });
-            al.Add(new Employee { Id = 1, firstName = "David", lastName = "Lightman" });
-            al.Add(new Employee { Id = 1, firstName = "Kevin", lastName = "Flyin" });
+            al.Add(new Employee { Id = 2, firstName = "Wiliam", lastName = "Gatez" });
+            al.Add(new Employee { Id = 3, firstName = "Anders", lastName = "Hejsberg" });
+            al.Add(new Employee { Id = 4, firstName = "David", lastName = "Lightman" });
+            al.Add(new Employee { Id = 5, firstName = "Kevin", lastName = "Flyin" });
             return al;
         }
         public static Employee[] GetEmployeesArrayList()
@@ -27,10 +27,10 @@ namespace CommonClasses
             Employee[] al = new Employee[]
             {
                 new Employee { Id = 1, firstName = "Joe1", lastName = "Ratz" },
-                new Employee { Id = 1, firstName = "Wiliam", lastName = "Gatez" },
-                new Employee { Id = 1, firstName = "Anders", lastName = "Hejsberg" },
-                new Employee { Id = 1, firstName = "David", lastName = "Lightman" },
-                new Employee { Id = 1, firstName = "Kevin", lastName = "Flyin" }
+                new Employee { Id = 2, firstName = "Wiliam", lastName = "Gatez" },
+                new Employee { Id = 3, firstName = "Anders", lastName = "Hejsberg" },
+                new Employee { Id = 4, firstName = "David", lastName = "Lightman" },
+                new Employee { Id = 5, firstName = "Kevin", lastName = "Flyin" }
             };
             
             return al;
